@@ -1,0 +1,21 @@
+.navbar-list {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: blueviolet;
+    color: white;
+    font-size: larger;
+    font-weight: 700;
+    top: 0;
+    position: fixed;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
+}
+
+a:hover {
+    cursor: pointer;
+    color: antiquewhite;
+}
