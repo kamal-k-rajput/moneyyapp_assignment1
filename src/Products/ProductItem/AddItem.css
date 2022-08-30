@@ -1,0 +1,29 @@
+.add-item-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 2px solid red;
+}
+
+.add-item-form>label {
+    margin: 10px;
+    width: 275px;
+}
+
+.add-item-form>label>input,
+textarea {
+    width: 100%;
+}
+
+@media screen and (max-width:480px) {
+
+    .add-item-form>label {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .add-item-form>label>input,
+    textarea {
+        width: 100%;
+    }
+}

@@ -1,28 +1,31 @@
 import React from "react";
 import "./Navbar.css";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Cart } from "../Cart/Cart";
 export const Navbar = () => {
+  const isLoggedIn = useSelector((store) => {
+    return store.isLoggedIn;
+  });
   return (
     <div>
-      <h1>Navbar</h1>
-
       <li className="navbar-list">
         <ul>
-          <Link to="/products"> Product</Link>
+          <Link to="/products"> Products</Link>
         </ul>
         <ul>
-          <Link to="/Login"> LogIn</Link>
+          <Link to="/additem">Add Product</Link>
         </ul>
         <ul>
-          <Link to="/products"> SignUp</Link>
+          {!isLoggedIn ? (
+            <Link to="/Login"> LogIn</Link>
+          ) : (
+            <Link to="/logout"> Log Out</Link>
+          )}
         </ul>
         <ul>
-          <Link to="/cart"> Cart</Link>
+          <Link to="/cart"> Cart{Cart.totalItems}</Link>
         </ul>
-
-        {/* <ul>Cart</ul>
-        <ul>LogIn</ul>
-        <ul>Sign Up</ul> */}
       </li>
     </div>
   );
