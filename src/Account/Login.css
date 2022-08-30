@@ -1,0 +1,15 @@
+.sign-up-button {
+    color: black;
+    border: 1px solid blue;
+    padding: 5px 10px;
+    border-radius: 15px;
+
+}
+
+.sign-up-button:hover {
+    color: white;
+    background-color: blue;
+    transition: ease .5s;
+    border-color: green;
+    ;
+}

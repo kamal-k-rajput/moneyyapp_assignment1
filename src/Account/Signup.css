@@ -1,0 +1,21 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 2px solid #ccc;
+}
+
+.form>label {
+    margin: 10px;
+}
+
+
+input {
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}

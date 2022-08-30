@@ -8,7 +8,7 @@ export const Navbar = () => {
     return store.isLoggedIn;
   });
   return (
-    <div>
+    <>
       <li className="navbar-list">
         <ul>
           <Link to="/products"> Products</Link>
@@ -27,6 +27,6 @@ export const Navbar = () => {
           <Link to="/cart"> Cart{Cart.totalItems}</Link>
         </ul>
       </li>
-    </div>
+    </>
   );
 };

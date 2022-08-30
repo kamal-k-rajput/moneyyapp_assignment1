@@ -14,7 +14,10 @@ export const ProductItem = ({ product }) => {
   });
   return (
     <section className="item-container">
-      <img src="https://images.unsplash.com/photo-1633080413586-0937ec56702c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+      <img
+        alt="product"
+        src="https://images.unsplash.com/photo-1633080413586-0937ec56702c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+      />
       <p>{product.name}</p>
       <p>{product.price}</p>
       <p className="product-description">{product.description}</p>
