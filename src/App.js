@@ -8,11 +8,12 @@ import { Login } from "./Account/Login";
 import { SignUp } from "./Account/SignUp";
 import { UpdateProduct } from "./Products/ProductItem/UpdateProduct/UpdateProduct";
 import { NotificationPanel } from "./Others/NotificationPanel";
+import { Logout } from "./Account/Logout";
+import { Cart } from "./Cart/Cart";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Products /> */}
         <Navbar />
         <NotificationPanel />
         <Routes>
@@ -20,8 +21,10 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/additem" element={<AddItem />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/updatitem" element={<UpdateProduct />} />
+          <Route path="/cart" element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

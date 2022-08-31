@@ -23,7 +23,7 @@ export const SignUp = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     };
-    fetch("http://localhost:5600/users/create", requestOptions)
+    fetch("http://localhost:5600/register", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         data.status

@@ -1,7 +1,13 @@
+import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./Login.css";
 export const Login = () => {
+  const dispatch = useDispatch();
+  const store = useSelector((store) => {
+    return store;
+  });
   const [formData, setformData] = useState({
     email: "",
     password: "",
@@ -16,7 +22,22 @@ export const Login = () => {
   };
   function submitForm(e) {
     e.preventDefault();
-    console.log("log in form submitted");
+
+    axios.post("http://localhost:5600/login", { ...formData }).then((res) => {
+      localStorage.setItem("authorisation", JSON.stringify(res.data.token));
+      dispatch({
+        type: "login",
+        payload: {
+          authorisation: res.data.token,
+          loggedInUser: {
+            userId: res.data.user._id,
+            name: res.data.user.name,
+            mobileNumber: res.data.user.mobileNumber,
+            email: res.data.user.email,
+          },
+        },
+      });
+    });
   }
   return (
     <div>

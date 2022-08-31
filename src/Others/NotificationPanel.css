@@ -1,4 +1,13 @@
 .notification-container {
-    background-color: bisque;
+    border: 1px solid grey;
+
+    background-color: rgb(1, 43, 29);
+    height: 30px;
     margin-top: 50px;
+    display: flex;
+
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    font-size: larger;
 }
